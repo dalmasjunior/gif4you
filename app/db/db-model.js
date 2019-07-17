@@ -7,7 +7,7 @@ var db = mysql.createConnection({
     host            : config.db.url,
     user            : config.db.username,
     password        : config.db.pwd,
-    database        : config.db.username,
+    database        : config.db.alias,
     Promise         : bluebird
 });
 

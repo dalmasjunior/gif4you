@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script src="./gifshot.min.js"></script>
+<script>
+    gifshot.createGIF({
+  'video': ['video.mp4'],
+  'text': 'Testing Text',
+  'offset': 15,
+  'numFrames': 150
+},function(obj) {
+  if(!obj.error) {
+    var image = obj.image,
+    animatedImage = document.createElement('img');
+    animatedImage.src = image;
+    document.body.appendChild(animatedImage);
+  }
+});
+</script>
+</body>
+</html>

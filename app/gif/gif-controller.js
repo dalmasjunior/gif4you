@@ -15,7 +15,8 @@ class GifController {
     saveGif(req, res) {
         const gif = req.body;
         try {            
-            db.saveGif([fileName,video.private, video.private ? video.pwd : '', new Date()]).then( result => {
+            db.saveGif([fileName,video.private, video.private ? video.pwd : '', new Date()]).then( (result, test) => {
+                console.log(test);
                 console.log(result);
                 res.status(200).json(result[0]);
             });
@@ -25,8 +26,9 @@ class GifController {
     }
 
     getGif(req, res) {
-        db.getGif(req.body.id).then( result => {
-            console.log(result);
+        db.getGif(req.params.id).then( (result, test) => {
+            console.log(test);
+                console.log(result);
             res.status(200).json(result[0]);
         })
     }

@@ -3,9 +3,10 @@ const config = {
         port: 9001
     },
     db: {
-        url: "sql10.freesqldatabase.com",
-        username: "sql10298640",
-        pwd: "jzJ1PtX3Bf",
+        url: "127.0.0.1",
+        username: "root",
+        pwd: "",
+        alias: 'gif4you',
         port: 3306
     }
 };
