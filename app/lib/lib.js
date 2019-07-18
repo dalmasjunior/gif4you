@@ -1,4 +1,5 @@
 const formidable = require('formidable');
+const fs = require('fs');
 
 class Lib {
     randomName() {
@@ -9,6 +10,14 @@ class Lib {
         const form = new formidable.IncomingForm();
 
         form.parse(file, next);
+    }
+
+    saveFile(file, next) {
+      const fileName = `${this.randomName()}.gif`;
+      fs.writeFile(`./Store/${fileName}`, file, 'base64', (err) => {
+        console.log(err);
+      });
+      next(fileName);
     }
 }
 

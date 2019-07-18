@@ -1,0 +1,9 @@
+.gifator p {
+    position: absolute;
+    text-align: center;
+    top: 3vh;
+    left: 10vw;
+    right: 10vw;
+    
+    font-size: 12px;
+}

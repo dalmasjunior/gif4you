@@ -1,0 +1,30 @@
+.gifator {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: default;
+
+    padding: 5% 2em;
+}
+
+.no-mobile {
+    display: none;
+}
+
+form .row{
+    margin-top: 1em;
+}
+
+form .row.custom-chk {
+    margin-left: 1em;
+}
+
+input.form-control {
+    max-width: 90%;
+}
+
+
+@media screen and (min-width: 800px) {
+    .no-mobile {
+        display: block;
+    }
+}

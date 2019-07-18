@@ -1,0 +1,28 @@
+<div class="gifator">
+    <div class="gif-viewer">
+        
+    </div>
+    <form>
+        <div class="row">
+            <input type="file" class="form-control" accept="gif, media/gif" ng-module="videoPath" onchange="angular.element(this).scope().getFile(this)">
+        </div>
+
+        <div class="row custom-chk">
+            <input type="checkbox" class="custom-control-input" id="privateChk" ng-checked="private" ng-model="private">
+            <label class="custom-control-label" for="privateChk" >Private</label>
+        </div>            
+        <div class="row">
+            <input type="password" class="form-control" placeholder="Password" ng-model="gifPassword" ng-change='showpwd()' ng-disabled="!private">
+        </div>
+        <div class="row">
+            <input type="date" class="form-control" placeholder="Visible until" ng-model="gifValidity" min="{{minValidity}}">
+            <small id="validityHelpBlock" class="form-text text-muted" >
+                Gif Validity.
+            </small>
+        </div>
+        <div class="row">            
+            <button type="button" class="btn btn-primary" ng-click="share()">Share</button>
+        </div>
+    
+    </form>
+</div>

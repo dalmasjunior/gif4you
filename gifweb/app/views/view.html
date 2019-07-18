@@ -1,0 +1,36 @@
+<div class="gifator">
+    <div class="gif-viewer" ng-if="loaded">
+        <a href="{{fileSrc}}" media="min-width:320px" download="gif4you.gif">
+            <img src="{{fileSrc}}" class="gif-download">
+        </a>
+        <button class="btn btn-primary" ng-click="downloadFile()"><i class="fa fa-download"></i> Donwload</button>
+    </div>
+    <div class="" ng-if="error">
+        <p class="text-center">GIF not found.</p>
+    </div>
+    <div class="modal fade" id="pwdRequestModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">GIF4YOU</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="pwdRequestInput" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="pwdRequestInput" ng-model="pwdRequest">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" ng-click="validatePwd()">Access</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a ng-href="{{fileSrc}}" download>Download</a>
